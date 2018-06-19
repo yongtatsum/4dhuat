@@ -204,7 +204,7 @@ $('#androidModal').modal('hide');
   <script>
   function pay() {
     var options = {
-      address: "yewLaSjEiziHhqgRwmyTomMNfiQm9h4SNM",
+      address: "TAoqY951ZKg5M7UZHEomUGQrbcYM4u9FiN",
       amount: 100000000, // 1 TRVC
       message: "Payment for BizApp",
       identifier: "446f7261"
