@@ -1,0 +1,536 @@
+{
+    "basePath": "https://lesystenancy.com/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/order",
+    "apis": [
+        {
+            "path": "/order/detail",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "get order's detail",
+                    "nickname": "OrderDetail",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "orderID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "page's length"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 404,
+                            "message": "Order not found."
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/order/getAddOnList",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "List addon",
+                    "nickname": "getAddOnList",
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/order/list",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "List orders",
+                    "nickname": "ListOrders",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/order/loginViaPasscode",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Login via passcode",
+                    "nickname": "loginViaPasscode",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "passcode",
+                            "type": "string",
+                            "required": true,
+                            "description": "order id"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "ic_code",
+                            "type": "integer",
+                            "required": false,
+                            "description": "ic_code (last four digit)"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "ip_address",
+                            "type": "integer",
+                            "required": false,
+                            "description": "user ip address",
+                            "defaultValue": "192.168.0.12"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "imei",
+                            "type": "integer",
+                            "required": false,
+                            "description": "phone imei",
+                            "defaultValue": "356938035643809"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 404,
+                            "message": "Order not found."
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/order/new",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Create new order",
+                    "nickname": "New",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "tenantName",
+                            "type": "string",
+                            "required": true,
+                            "description": "tenant's name"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "tenantContact",
+                            "type": "string",
+                            "required": true,
+                            "description": "tenant's contact"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "landLordName",
+                            "type": "string",
+                            "required": true,
+                            "description": "land lord's name"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "landLordContact",
+                            "type": "string",
+                            "required": true,
+                            "description": "land lord's contact"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "picture[]",
+                            "type": "file",
+                            "required": true,
+                            "description": "picture"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "addOns[]",
+                            "type": "string",
+                            "required": false,
+                            "description": "addOns"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Image not found"
+                        },
+                        {
+                            "code": 404,
+                            "message": "User not found."
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/order/newFromExternal",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Create new order from external app",
+                    "nickname": "New",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "id",
+                            "type": "string",
+                            "required": true,
+                            "description": "creator's id"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "email",
+                            "type": "string",
+                            "required": true,
+                            "description": "creator's email"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "first_name",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's first_name"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "last_name",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's last_name"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "source",
+                            "type": "string",
+                            "required": true,
+                            "description": "external source",
+                            "enum": [
+                                "wonderlist"
+                            ]
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "tenantName",
+                            "type": "string",
+                            "required": true,
+                            "description": "tenant's name"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "tenantContact",
+                            "type": "string",
+                            "required": true,
+                            "description": "tenant's contact"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "landLordName",
+                            "type": "string",
+                            "required": true,
+                            "description": "land lord's name"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "landLordContact",
+                            "type": "string",
+                            "required": true,
+                            "description": "land lord's contact"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "picture[]",
+                            "type": "file",
+                            "required": true,
+                            "description": "picture"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Image not found"
+                        },
+                        {
+                            "code": 404,
+                            "message": "User not found."
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/order/regenPDF",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "regen signature pdf",
+                    "nickname": "regenPDF",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "orderID",
+                            "type": "string",
+                            "required": true,
+                            "description": "order's id"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Image not found"
+                        },
+                        {
+                            "code": 404,
+                            "message": "User not found."
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/order/replySignature",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "reply Signature decision",
+                    "nickname": "replySignature",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "orderID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "order id"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "decision",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's decision",
+                            "enum": [
+                                "accept",
+                                "reject"
+                            ]
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "ip_address",
+                            "type": "integer",
+                            "required": false,
+                            "description": "user ip address",
+                            "defaultValue": "192.168.0.12"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "imei",
+                            "type": "integer",
+                            "required": false,
+                            "description": "phone imei",
+                            "defaultValue": "356938035643809"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 404,
+                            "message": "Order not found."
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/order/resendAgreement",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "resend order agreement",
+                    "nickname": "resendAgreement",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "orderID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "type",
+                            "type": "string",
+                            "required": true,
+                            "description": "resend doc type",
+                            "enum": [
+                                "manual",
+                                "digital"
+                            ]
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 404,
+                            "message": "Order not found."
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/order/resendEStamping",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "resend e-stamping",
+                    "nickname": "resendEStamping",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "orderID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "page's length"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 404,
+                            "message": "Order not found."
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/order/resendSignInvitation",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "resend sign invitation",
+                    "nickname": "resendSignInvitation",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "recipient",
+                            "type": "string",
+                            "required": false,
+                            "description": "recipient",
+                            "enum": [
+                                "landlord",
+                                "tenant"
+                            ]
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "orderID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "order id"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "ip_address",
+                            "type": "integer",
+                            "required": false,
+                            "description": "user ip address",
+                            "defaultValue": "192.168.0.12"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "imei",
+                            "type": "integer",
+                            "required": false,
+                            "description": "phone imei",
+                            "defaultValue": "356938035643809"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 404,
+                            "message": "Order not found."
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/order/submitSignature",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Submit signature",
+                    "nickname": "submitSign",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "signatureID",
+                            "type": "string",
+                            "required": true,
+                            "description": "signature's id"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "signature",
+                            "type": "file",
+                            "required": true,
+                            "description": "signature"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "ip_address",
+                            "type": "integer",
+                            "required": false,
+                            "description": "user ip address",
+                            "defaultValue": "192.168.0.12"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "imei",
+                            "type": "integer",
+                            "required": false,
+                            "description": "phone imei",
+                            "defaultValue": "356938035643809"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Image not found"
+                        },
+                        {
+                            "code": 404,
+                            "message": "User not found."
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

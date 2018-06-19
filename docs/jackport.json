@@ -1,0 +1,185 @@
+{
+    "basePath": "https://www.fourdhuat.com:443/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/jackport",
+    "apis": [
+        {
+            "path": "/jackport/bid",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "bid",
+                    "nickname": "bid",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "phase_id",
+                            "type": "string",
+                            "required": true,
+                            "description": "phase_id"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "purchaseToken",
+                            "type": "string",
+                            "required": true,
+                            "description": "SKU",
+                            "defaultValue": "pdgcccodjdkdibjghjobebej.AO-J1Owl8mdZNNQZnOHO0W-1W3jkVHbNTlErmw3UpgHI09Q0OlnkEPBanCKssoIas1HfD-6UdnW8T9kQ0W6WR-YgLR7O712JEz6-1u4H70WMnJKVyfjLPzX2FRRRB4Bs0EQoZ9NZVR69Ibt-P3_e8NoHpnURGaTElg"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "SKU",
+                            "type": "string",
+                            "required": true,
+                            "description": "SKU",
+                            "enum": [
+                                "tips.five.comsumable",
+                                "tips.ten.comsumable",
+                                "tips.thirty.comsumable",
+                                "tips.fifty.comsumable",
+                                "tips.hundred.comsumable"
+                            ]
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "orderID",
+                            "type": "string",
+                            "required": true,
+                            "description": "orderID"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/jackport/freeNumber",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "freeNumber",
+                    "nickname": "freeNumber",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "phase_id",
+                            "type": "string",
+                            "required": true,
+                            "description": "phase_id"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/jackport/getBidNumbers",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "get Bid Numbers",
+                    "nickname": "getBidNumbers",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "phase_id",
+                            "type": "string",
+                            "required": true,
+                            "description": "phase_id"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/jackport/getCurrent",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "get current jackport",
+                    "nickname": "getCurrent",
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/jackport/getMyBidsNumbers",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "get Bid Numbers",
+                    "nickname": "getMyBidsNumbers",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "phase_id",
+                            "type": "string",
+                            "required": true,
+                            "description": "phase_id"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/jackport/getPassResult",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "getPassResult",
+                    "nickname": "getPassResult",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

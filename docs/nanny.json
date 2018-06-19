@@ -1,0 +1,138 @@
+{
+    "basePath": "http://139.59.228.206/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/nanny",
+    "apis": [
+        {
+            "path": "/nanny/acceptRequest",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "acceptRequest (nanny use)",
+                    "nickname": "acceptRequest",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "userID",
+                            "type": "string",
+                            "required": false,
+                            "description": "member's userID"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/nanny/cancelRequest",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "cancelRequest",
+                    "nickname": "cancelRequest",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "nannyProfileID",
+                            "type": "string",
+                            "required": false,
+                            "description": "nanny's profileID"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/nanny/list",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Nanny listing",
+                    "nickname": "list",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "keyword",
+                            "type": "string",
+                            "required": false,
+                            "description": "keyword"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "location",
+                            "type": "string",
+                            "required": false,
+                            "description": "location"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "baby_age",
+                            "type": "string",
+                            "required": false,
+                            "description": "Facebook avatar"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/nanny/rejectRequest",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "rejectRequest (nanny use)",
+                    "nickname": "rejectRequest",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "userID",
+                            "type": "string",
+                            "required": false,
+                            "description": "member's userID"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/nanny/sendRequest",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "sendRequest",
+                    "nickname": "sendRequest",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "nannyProfileID",
+                            "type": "string",
+                            "required": false,
+                            "description": "nanny's profileID"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

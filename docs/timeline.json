@@ -1,0 +1,476 @@
+{
+    "basePath": "https://lesystenancy.com/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/timeline",
+    "apis": [
+        {
+            "path": "/advertiser/ListMasters",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "List masters",
+                    "nickname": "ListMasters",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/advertiser/getRandomMasters",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Get random masters",
+                    "nickname": "GetRandomMasters",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "limit",
+                            "type": "integer",
+                            "required": false,
+                            "description": "Maximum number of data retrieve"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/timeline",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Get timeline (with analytic)",
+                    "nickname": "GetTimeline",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "userID",
+                            "type": "integer",
+                            "required": false,
+                            "description": "userID (optional, will use current user if no insert)"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/timeline/broadcast",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Update like",
+                    "nickname": "broadcast",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "user_ids[]",
+                            "type": "integer",
+                            "required": true,
+                            "description": "user ids"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "timelineID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "timeline's id"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/timeline/broadcastNewPost",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "broadcast Private timeline",
+                    "nickname": "BroadcastNewPost",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "title",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's title"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "message",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's message"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "pictures[]",
+                            "type": "file",
+                            "required": true,
+                            "allowMultiple": true,
+                            "description": "user's pictures"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "user_ids[]",
+                            "type": "integer",
+                            "required": true,
+                            "description": "user ids"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 401,
+                            "message": "Email and password does not match"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Email address not found"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/timeline/broadcastPage",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Share master's page",
+                    "nickname": "broadcast",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "user_ids[]",
+                            "type": "integer",
+                            "required": true,
+                            "description": "user ids"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "userID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "user's id, user who you wish to shared"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/timeline/edit",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Edit timeline",
+                    "nickname": "EditTimeline",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "timelineID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "timeline's ID"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "title",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's title"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "message",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's message"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "pictures[]",
+                            "type": "file",
+                            "required": true,
+                            "allowMultiple": true,
+                            "description": "user's pictures"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 401,
+                            "message": "Email and password does not match"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Email address not found"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/timeline/editComment",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Update like",
+                    "nickname": "updateLike",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "commentID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "comment's ID"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "message",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's message"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/timeline/listComment",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Get timeline's comments",
+                    "nickname": "ListComment",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "timelineID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "timeline's ID"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/timeline/listLikedUsers",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "List like users",
+                    "nickname": "updateLike",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "timelineID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "timeline's ID"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/timeline/post",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Post timeline",
+                    "nickname": "PostTimeline",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "title",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's title"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "message",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's message"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "pictures[]",
+                            "type": "file",
+                            "required": true,
+                            "allowMultiple": true,
+                            "description": "user's pictures"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 401,
+                            "message": "Email and password does not match"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Email address not found"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/timeline/postComment",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Post timeline's commment",
+                    "nickname": "postComment",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "message",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's message"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "timelineID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "timeline's ID"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/timeline/remove",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Remove timeline",
+                    "nickname": "removeTimeline",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "timelineID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "timeline's ID"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/timeline/removeComment",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Update like",
+                    "nickname": "updateLike",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "commentID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "comment's ID"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/timeline/updateLike",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Update like",
+                    "nickname": "updateLike",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "timelineID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "timeline's ID"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

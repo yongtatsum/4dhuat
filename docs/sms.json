@@ -1,0 +1,50 @@
+{
+    "basePath": "https://www.fourdhuat.com:443/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/sms",
+    "apis": [
+        {
+            "path": "/sms/comfirmTrans",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "comfirm tracking",
+                    "nickname": "comfirm",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "transid",
+                            "type": "string",
+                            "required": true,
+                            "description": "transid"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/sms/subscribe",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "subscribe",
+                    "nickname": "subscribe",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "mobile_no",
+                            "type": "string",
+                            "required": true,
+                            "description": "mobile_no"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

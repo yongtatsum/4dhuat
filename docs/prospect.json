@@ -1,0 +1,157 @@
+{
+    "basePath": "https://lesystenancy.com/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/prospect",
+    "apis": [
+        {
+            "path": "/prospect/agent/batches",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Payment packages",
+                    "nickname": "packages",
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/prospect/agent/editCriteria",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "edit Criteria",
+                    "nickname": "editCriteria",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "prospectBatch_id",
+                            "type": "string",
+                            "required": true,
+                            "description": "prospect batch's id"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "country",
+                            "type": "integer",
+                            "required": true,
+                            "description": "countryID, 62 - Malaysia",
+                            "defaultValue": "62"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "state",
+                            "type": "integer",
+                            "required": true,
+                            "description": "stateID, 4 - kuala lumpur",
+                            "defaultValue": "4"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "area",
+                            "type": "integer",
+                            "required": true,
+                            "description": "areaID, 131 - cheras",
+                            "defaultValue": "131"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "type",
+                            "type": "integer",
+                            "required": true,
+                            "description": "type 's id"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/prospect/agent/getMatchedUserByBatch",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Get Matched User By Batch",
+                    "nickname": "getMatchedUserByBatch",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "prospectBatch_id",
+                            "type": "string",
+                            "required": true,
+                            "description": "prospect batch's id"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/prospect/member/submitCriteria",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "edit Criteria",
+                    "nickname": "editCriteria",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "country",
+                            "type": "integer",
+                            "required": true,
+                            "description": "countryID, 62 - Malaysia",
+                            "defaultValue": "62"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "state",
+                            "type": "integer",
+                            "required": true,
+                            "description": "stateID, 4 - kuala lumpur",
+                            "defaultValue": "4"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "area",
+                            "type": "integer",
+                            "required": true,
+                            "description": "areaID, 131 - cheras",
+                            "defaultValue": "131"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "type",
+                            "type": "integer",
+                            "required": true,
+                            "description": "type 's id"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "remark",
+                            "type": "string",
+                            "required": false,
+                            "description": "remark from user"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

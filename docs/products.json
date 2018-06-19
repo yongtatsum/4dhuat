@@ -1,0 +1,220 @@
+{
+    "basePath": "http://bidoboo.com/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/products",
+    "apis": [
+        {
+            "path": "/products/allResults",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "all results",
+                    "nickname": "allResults",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "product_id",
+                            "type": "integer",
+                            "required": false,
+                            "description": "product id"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length (for products array)"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/products/announceResult",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "all results",
+                    "nickname": "allResults",
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/products/bid",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "bid the product",
+                    "nickname": "bid",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "product_id",
+                            "type": "integer",
+                            "required": false,
+                            "description": "product id"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "entries",
+                            "type": "integer",
+                            "required": false,
+                            "description": "number of entries"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/products/detail",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "homePage",
+                    "nickname": "homePage",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "product_id",
+                            "type": "integer",
+                            "required": false,
+                            "description": "product id"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/products/getProductsByMenu",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "get Products By menu",
+                    "nickname": "getProductsByMenu",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "menu_id",
+                            "type": "integer",
+                            "required": true,
+                            "description": "menu's id"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length (for products array)"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/products/getProductsByType",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "get Products By Types",
+                    "nickname": "getProductsByType",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "type",
+                            "type": "integer",
+                            "required": true,
+                            "description": "product's type",
+                            "enum": [
+                                "all",
+                                "new",
+                                "end_soon"
+                            ]
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length (for products array)"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/products/homePage",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "homePage",
+                    "nickname": "homePage",
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/products/myResults",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "my results",
+                    "nickname": "myResults",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "product_id",
+                            "type": "integer",
+                            "required": false,
+                            "description": "product id"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length (for products array)"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

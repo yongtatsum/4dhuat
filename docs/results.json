@@ -1,0 +1,162 @@
+{
+    "basePath": "https://www.fourdhuat.com:443/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/results",
+    "apis": [
+        {
+            "path": "/results/getLuckyNumReport",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "get Lucky Number Report",
+                    "nickname": "getLuckyNumReport",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "number",
+                            "type": "integer",
+                            "required": true,
+                            "description": "lucky's number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/results/getQztReport",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "get qzt Report",
+                    "nickname": "getQztReport",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "number",
+                            "type": "integer",
+                            "required": true,
+                            "description": "lucky's number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/results/getSudoku",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "get Lucky Number sudoku",
+                    "nickname": "getSudoku",
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/results/latest",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "list latest",
+                    "nickname": "listLatest",
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/results/listByDate",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "list result by date",
+                    "nickname": "listByDate",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "date_id",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "version_code",
+                            "type": "integer",
+                            "required": false,
+                            "description": "version_code"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/results/listDates",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "list dates",
+                    "nickname": "listDates",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/results/listFrequence",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "list Frequence",
+                    "nickname": "listFrequence",
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/results/listTbg",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "list Tbg",
+                    "nickname": "listTbg",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "type",
+                            "type": "string",
+                            "required": false,
+                            "description": "page's length",
+                            "enum": [
+                                "tpk",
+                                "gym",
+                                "wzt"
+                            ]
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

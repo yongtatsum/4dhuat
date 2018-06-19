@@ -1,0 +1,231 @@
+{
+    "basePath": "https://www.fourdhuat.com:443/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/systemUse",
+    "apis": [
+        {
+            "path": "/systemuse/createDeviceGroup",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "createDeviceGroup",
+                    "nickname": "createDeviceGroup",
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/systemuse/doAnalytics",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "doAnalytics",
+                    "nickname": "doAnalytics",
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/systemuse/getLatestResults",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "getResults",
+                    "nickname": "getResultsByDate",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "type",
+                            "type": "string",
+                            "required": true,
+                            "description": "result's date (yyyy-mm-dd)",
+                            "enum": [
+                                "all",
+                                "magnum-toto-damacai",
+                                "sabah-sarawak-stc",
+                                "singapore-pool"
+                            ]
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/systemuse/getResults",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "getResults",
+                    "nickname": "getResults",
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/systemuse/getResultsByDate",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "getResults",
+                    "nickname": "getResultsByDate",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "date",
+                            "type": "string",
+                            "required": true,
+                            "description": "result's date (yyyy-mm-dd)"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "type",
+                            "type": "string",
+                            "required": true,
+                            "description": "result's date (yyyy-mm-dd)",
+                            "enum": [
+                                "all",
+                                "magnum-toto-damacai",
+                                "sabah-sarawak-stc",
+                                "singapore-pool"
+                            ]
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/systemuse/getTuaBehGong",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "getTuaBehGong",
+                    "nickname": "getTuaBehGong",
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/systemuse/pushAdminNotification",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "push AdminNotification",
+                    "nickname": "pushAdminNotification",
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/systemuse/pushBulkNotification",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "push reult to all participants",
+                    "nickname": "pushBulkResultNotification",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "message",
+                            "type": "string",
+                            "required": false,
+                            "description": "message"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "msg_type",
+                            "type": "string",
+                            "required": false,
+                            "description": "action",
+                            "enum": [
+                                "normal",
+                                "new_result",
+                                "new_sudoku",
+                                "jackport_result",
+                                "jackport_new"
+                            ]
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "action",
+                            "type": "string",
+                            "required": false,
+                            "description": "action"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/systemuse/pushDeviceToGroup",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "pushDeviceToGroup",
+                    "nickname": "pushDeviceToGroup",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "token",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's app token"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/systemuse/pushNewResultNotification",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "push NewResultNotification",
+                    "nickname": "pushNewResultNotification",
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/systemuse/verifyReceipt",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "getResults",
+                    "nickname": "getResultsByDate",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "purchaseToken",
+                            "type": "string",
+                            "required": true,
+                            "description": "SKU",
+                            "defaultValue": "pdgcccodjdkdibjghjobebej.AO-J1Owl8mdZNNQZnOHO0W-1W3jkVHbNTlErmw3UpgHI09Q0OlnkEPBanCKssoIas1HfD-6UdnW8T9kQ0W6WR-YgLR7O712JEz6-1u4H70WMnJKVyfjLPzX2FRRRB4Bs0EQoZ9NZVR69Ibt-P3_e8NoHpnURGaTElg"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "SKU",
+                            "type": "string",
+                            "required": true,
+                            "description": "SKU",
+                            "enum": [
+                                "tips.five.comsumable",
+                                "tips.ten.comsumable",
+                                "tips.thirty.comsumable",
+                                "tips.fifty.comsumable",
+                                "tips.hundred.comsumable"
+                            ]
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

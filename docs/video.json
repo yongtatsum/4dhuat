@@ -1,0 +1,119 @@
+{
+    "basePath": "http://letsfly.gii-bee.com/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/video",
+    "apis": [
+        {
+            "path": "/video/listLinks",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "list links",
+                    "nickname": "listLinks",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/video/listVideos",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "list video",
+                    "nickname": "listVideo",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "mobile_no",
+                            "type": "string",
+                            "required": false,
+                            "description": "mobile_no"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "isSaveMode",
+                            "type": "string",
+                            "required": false,
+                            "description": "isSaveMode"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/video/v2/listVideos",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "list video v2",
+                    "nickname": "listVideo",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "mobile_no",
+                            "type": "string",
+                            "required": false,
+                            "description": "mobile_no"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "isSaveMode",
+                            "type": "string",
+                            "required": false,
+                            "description": "isSaveMode"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

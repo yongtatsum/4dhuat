@@ -1,0 +1,30 @@
+{
+    "apiVersion": "1.0",
+    "swaggerVersion": null,
+    "apis": [
+        {
+            "path": "/jackport.{format}",
+            "description": "jackport operations"
+        },
+        {
+            "path": "/jackportAdmin.{format}",
+            "description": "jackport admin operations"
+        },
+        {
+            "path": "/results.{format}",
+            "description": "results operations"
+        },
+        {
+            "path": "/sms.{format}",
+            "description": "sms operations"
+        },
+        {
+            "path": "/systemUse.{format}",
+            "description": "systemUse operations"
+        },
+        {
+            "path": "/user.{format}",
+            "description": "user operations"
+        }
+    ]
+}

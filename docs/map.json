@@ -1,0 +1,792 @@
+{
+    "basePath": "https://lesystenancy.com/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/map",
+    "apis": [
+        {
+            "path": "/map/getAreaByState",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "get area By state",
+                    "nickname": "getAreaByState",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "id",
+                            "type": "string",
+                            "required": true,
+                            "description": "state id",
+                            "defaultValue": "13"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/map/getNearbyArea",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "get nearby area",
+                    "nickname": "getNearbyArea",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "lat",
+                            "type": "string",
+                            "required": false,
+                            "description": "latitude",
+                            "defaultValue": "3.032715"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "lng",
+                            "type": "string",
+                            "required": false,
+                            "description": "longitude",
+                            "defaultValue": "101.618802"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "distance",
+                            "type": "integer",
+                            "required": false,
+                            "description": "distance (km)"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "q",
+                            "type": "string",
+                            "required": false,
+                            "description": "keyword"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "cat",
+                            "type": "string",
+                            "required": false,
+                            "description": "Category",
+                            "enum": [
+                                "Sales",
+                                "Rent",
+                                "New"
+                            ]
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "name",
+                            "type": "string",
+                            "required": false,
+                            "description": "property's name"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "country",
+                            "type": "integer",
+                            "required": false,
+                            "description": "countryID, 62 - Malaysia",
+                            "defaultValue": "62"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "state",
+                            "type": "integer",
+                            "required": false,
+                            "description": "stateID, 4 - kuala lumpur"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "area",
+                            "type": "integer",
+                            "required": false,
+                            "description": "areaID, 131 - cheras"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "suburb",
+                            "type": "integer",
+                            "required": false,
+                            "description": "suburb"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "type",
+                            "type": "string",
+                            "required": false,
+                            "description": "type",
+                            "enum": [
+                                "Terrace house",
+                                "Single Storey Terrace House",
+                                "Double Storey Terrace House"
+                            ]
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "min_price",
+                            "type": "integer",
+                            "required": false,
+                            "description": "min_price"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "max_price",
+                            "type": "integer",
+                            "required": false,
+                            "description": "max_price"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "buildup",
+                            "type": "integer",
+                            "required": false,
+                            "description": "buildup"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "width",
+                            "type": "integer",
+                            "required": false,
+                            "description": "width"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "length",
+                            "type": "integer",
+                            "required": false,
+                            "description": "length"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "bed",
+                            "type": "integer",
+                            "required": false,
+                            "description": "bed"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "bath",
+                            "type": "integer",
+                            "required": false,
+                            "description": "bath"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "direction",
+                            "type": "string",
+                            "required": false,
+                            "description": "direction",
+                            "enum": [
+                                "North",
+                                "North-East",
+                                "East",
+                                "South-East",
+                                "South",
+                                "South-West",
+                                "West",
+                                "North-West"
+                            ]
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "tenure",
+                            "type": "integer",
+                            "required": false,
+                            "description": "tenureID , 1- Freehold, 2 - Leasehold ..."
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "reno",
+                            "type": "string",
+                            "required": false,
+                            "description": "renovation",
+                            "enum": [
+                                "Basic",
+                                "Semi renovation",
+                                "Full renovation"
+                            ]
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "facilities",
+                            "type": "string",
+                            "required": false,
+                            "description": "facilities, 1- BBQ, 2 - Parking"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "searchMethod",
+                            "type": "string",
+                            "required": false,
+                            "description": "searchMethod",
+                            "enum": [
+                                "topView",
+                                "recommended"
+                            ]
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "erf",
+                            "type": "integer",
+                            "required": false,
+                            "description": "Erf Size - [ In squared metres]"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "levies",
+                            "type": "integer",
+                            "required": false,
+                            "description": "levies"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "rates_taxes",
+                            "type": "integer",
+                            "required": false,
+                            "description": "rates taxes"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "office",
+                            "type": "integer",
+                            "required": false,
+                            "description": "office"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "garage",
+                            "type": "integer",
+                            "required": false,
+                            "description": "garage"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "domestic",
+                            "type": "string",
+                            "required": false,
+                            "description": "domestic",
+                            "enum": [
+                                "true",
+                                "false"
+                            ]
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "limit",
+                            "type": "integer",
+                            "required": false,
+                            "description": "limit for area"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/map/getNearbyProp",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "get nearby property",
+                    "nickname": "getNearbyProp",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "lat",
+                            "type": "string",
+                            "required": false,
+                            "description": "latitude",
+                            "defaultValue": "3.032715"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "lng",
+                            "type": "string",
+                            "required": false,
+                            "description": "longitude",
+                            "defaultValue": "101.618802"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "distance",
+                            "type": "integer",
+                            "required": false,
+                            "description": "distance (km)"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "q",
+                            "type": "string",
+                            "required": false,
+                            "description": "keyword"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "cat",
+                            "type": "string",
+                            "required": false,
+                            "description": "Category",
+                            "enum": [
+                                "Sales",
+                                "Rent",
+                                "New"
+                            ]
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "name",
+                            "type": "string",
+                            "required": false,
+                            "description": "property's name"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "country",
+                            "type": "integer",
+                            "required": false,
+                            "description": "countryID, 62 - Malaysia",
+                            "defaultValue": "62"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "state",
+                            "type": "integer",
+                            "required": false,
+                            "description": "stateID, 4 - kuala lumpur"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "suburb",
+                            "type": "integer",
+                            "required": false,
+                            "description": "suburb"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "area",
+                            "type": "integer",
+                            "required": false,
+                            "description": "areaID, 131 - cheras"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "type",
+                            "type": "string",
+                            "required": false,
+                            "description": "type",
+                            "enum": [
+                                "Terrace house",
+                                "Single Storey Terrace House",
+                                "Double Storey Terrace House"
+                            ]
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "min_price",
+                            "type": "integer",
+                            "required": false,
+                            "description": "min_price"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "max_price",
+                            "type": "integer",
+                            "required": false,
+                            "description": "max_price"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "buildup",
+                            "type": "integer",
+                            "required": false,
+                            "description": "buildup"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "width",
+                            "type": "integer",
+                            "required": false,
+                            "description": "width"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "length",
+                            "type": "integer",
+                            "required": false,
+                            "description": "length"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "bed",
+                            "type": "integer",
+                            "required": false,
+                            "description": "bed"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "bath",
+                            "type": "integer",
+                            "required": false,
+                            "description": "bath"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "direction",
+                            "type": "string",
+                            "required": false,
+                            "description": "direction",
+                            "enum": [
+                                "North",
+                                "North-East",
+                                "East",
+                                "South-East",
+                                "South",
+                                "South-West",
+                                "West",
+                                "North-West"
+                            ]
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "tenure",
+                            "type": "integer",
+                            "required": false,
+                            "description": "tenureID , 1- Freehold, 2 - Leasehold ..."
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "reno",
+                            "type": "string",
+                            "required": false,
+                            "description": "renovation",
+                            "enum": [
+                                "Basic",
+                                "Semi renovation",
+                                "Full renovation"
+                            ]
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "facilities",
+                            "type": "string",
+                            "required": false,
+                            "description": "facilities, 1- BBQ, 2 - Parking"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "searchMethod",
+                            "type": "string",
+                            "required": false,
+                            "description": "searchMethod",
+                            "enum": [
+                                "topView",
+                                "recommended"
+                            ]
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "erf",
+                            "type": "integer",
+                            "required": false,
+                            "description": "Erf Size - [ In squared metres]"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "levies",
+                            "type": "integer",
+                            "required": false,
+                            "description": "levies"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "rates_taxes",
+                            "type": "integer",
+                            "required": false,
+                            "description": "rates taxes"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "office",
+                            "type": "integer",
+                            "required": false,
+                            "description": "office"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "garage",
+                            "type": "integer",
+                            "required": false,
+                            "description": "garage"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "domestic",
+                            "type": "string",
+                            "required": false,
+                            "description": "domestic",
+                            "enum": [
+                                "true",
+                                "false"
+                            ]
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/map/getStateByCountry",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "get State By Country",
+                    "nickname": "getStateByCountry",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "distance",
+                            "type": "integer",
+                            "required": false,
+                            "description": "distance (km)"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "q",
+                            "type": "string",
+                            "required": false,
+                            "description": "keyword"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "cat",
+                            "type": "string",
+                            "required": false,
+                            "description": "Category",
+                            "enum": [
+                                "Sales",
+                                "Rent",
+                                "New"
+                            ]
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "name",
+                            "type": "string",
+                            "required": false,
+                            "description": "property's name"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "country",
+                            "type": "integer",
+                            "required": false,
+                            "description": "countryID, 62 - Malaysia",
+                            "defaultValue": "62"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "state",
+                            "type": "integer",
+                            "required": false,
+                            "description": "stateID, 4 - kuala lumpur"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "area",
+                            "type": "integer",
+                            "required": false,
+                            "description": "areaID, 131 - cheras"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "suburb",
+                            "type": "integer",
+                            "required": false,
+                            "description": "suburb"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "type",
+                            "type": "string",
+                            "required": false,
+                            "description": "type",
+                            "enum": [
+                                "Terrace house",
+                                "Single Storey Terrace House",
+                                "Double Storey Terrace House"
+                            ]
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "min_price",
+                            "type": "integer",
+                            "required": false,
+                            "description": "min_price"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "max_price",
+                            "type": "integer",
+                            "required": false,
+                            "description": "max_price"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "buildup",
+                            "type": "integer",
+                            "required": false,
+                            "description": "buildup"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "width",
+                            "type": "integer",
+                            "required": false,
+                            "description": "width"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "length",
+                            "type": "integer",
+                            "required": false,
+                            "description": "length"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "bed",
+                            "type": "integer",
+                            "required": false,
+                            "description": "bed"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "bath",
+                            "type": "integer",
+                            "required": false,
+                            "description": "bath"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "direction",
+                            "type": "string",
+                            "required": false,
+                            "description": "direction",
+                            "enum": [
+                                "North",
+                                "North-East",
+                                "East",
+                                "South-East",
+                                "South",
+                                "South-West",
+                                "West",
+                                "North-West"
+                            ]
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "tenure",
+                            "type": "integer",
+                            "required": false,
+                            "description": "tenureID , 1- Freehold, 2 - Leasehold ..."
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "reno",
+                            "type": "string",
+                            "required": false,
+                            "description": "renovation",
+                            "enum": [
+                                "Basic",
+                                "Semi renovation",
+                                "Full renovation"
+                            ]
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "facilities",
+                            "type": "string",
+                            "required": false,
+                            "description": "facilities, 1- BBQ, 2 - Parking"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "searchMethod",
+                            "type": "string",
+                            "required": false,
+                            "description": "searchMethod",
+                            "enum": [
+                                "topView",
+                                "recommended"
+                            ]
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "erf",
+                            "type": "integer",
+                            "required": false,
+                            "description": "Erf Size - [ In squared metres]"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "levies",
+                            "type": "integer",
+                            "required": false,
+                            "description": "levies"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "rates_taxes",
+                            "type": "integer",
+                            "required": false,
+                            "description": "rates taxes"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "office",
+                            "type": "integer",
+                            "required": false,
+                            "description": "office"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "garage",
+                            "type": "integer",
+                            "required": false,
+                            "description": "garage"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "domestic",
+                            "type": "string",
+                            "required": false,
+                            "description": "domestic",
+                            "enum": [
+                                "true",
+                                "false"
+                            ]
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

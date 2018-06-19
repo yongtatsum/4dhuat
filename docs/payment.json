@@ -1,0 +1,445 @@
+{
+    "basePath": "https://lesystenancy.com/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/payment",
+    "apis": [
+        {
+            "path": "/mobileSubscriptions/getPaymentDetails",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "get inapp purchase record by batch ID",
+                    "nickname": "getPurchaseStatus",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "platform",
+                            "type": "string",
+                            "required": true,
+                            "description": "device's platform",
+                            "enum": [
+                                "android",
+                                "ios"
+                            ]
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "batchID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "user 's batch id"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/mobileSubscriptions/getStatus/platform/{platform}",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "get all inapp purchase recard ",
+                    "nickname": "getPurchaseStatus",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "platform",
+                            "type": "string",
+                            "required": true,
+                            "description": "device's platform",
+                            "enum": [
+                                "android",
+                                "ios"
+                            ]
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/mobileSubscriptions/update/cancel",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Update server when cancelation found (need to check from ios/android store) ",
+                    "nickname": "cancelSubscription",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "purchaseToken",
+                            "type": "string",
+                            "required": true,
+                            "description": "purchaseToken (token to trace back subscription status)"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/mobileSubscriptions/update/subscribe",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Update server after in-app purchase",
+                    "nickname": "updateSubscribe",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "platform",
+                            "type": "string",
+                            "required": true,
+                            "description": "device's platform",
+                            "enum": [
+                                "android",
+                                "ios"
+                            ]
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "packageID",
+                            "type": "string",
+                            "required": true,
+                            "description": "package's id"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "purchaseToken",
+                            "type": "string",
+                            "required": true,
+                            "description": "purchaseToken (token to trace back subscription status in future)"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "purchaseEmail",
+                            "type": "string",
+                            "required": true,
+                            "description": "purchaser's email"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "orderID",
+                            "type": "string",
+                            "required": false,
+                            "description": "orderID (optional)"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "batchID",
+                            "type": "string",
+                            "required": false,
+                            "description": "batchID (optional, only pass it as parameter if batch renew)"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "prospectID",
+                            "type": "string",
+                            "required": false,
+                            "description": "prospectID (optional, only pass it as parameter if prospect batch renew)"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "description",
+                            "type": "string",
+                            "required": false,
+                            "description": "description"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "remark",
+                            "type": "string",
+                            "required": false,
+                            "description": "remark"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/payment/ipay88/sdkBackend",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "sdkBackend",
+                    "nickname": "sdkBackend",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "RefNo",
+                            "type": "string",
+                            "required": true,
+                            "description": "RefNo",
+                            "defaultValue": "462"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "MerchantCode",
+                            "type": "string",
+                            "required": true,
+                            "description": "MerchantCode",
+                            "defaultValue": "M08747"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "PaymentId",
+                            "type": "string",
+                            "required": true,
+                            "description": "PaymentId",
+                            "defaultValue": "2"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "Amount",
+                            "type": "string",
+                            "required": true,
+                            "description": "Amount",
+                            "defaultValue": "1.00"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "Currency",
+                            "type": "string",
+                            "required": true,
+                            "description": "Currency",
+                            "defaultValue": "MYR"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "Remark",
+                            "type": "string",
+                            "required": true,
+                            "description": "tenant's name",
+                            "defaultValue": "V9lLjQgUrBRPsqGtUX7QinNyXszjRENpCsprEyyVQ+7DCQdqbYaKq6q7KiAeaSqCcr/IiUf1DDX89eNofU57qA"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "TransId",
+                            "type": "string",
+                            "required": true,
+                            "description": "TransId",
+                            "defaultValue": "T10850233540065424971"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "AuthCode",
+                            "type": "string",
+                            "required": true,
+                            "description": "AuthCode",
+                            "defaultValue": "T10850233540065424971"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "Status",
+                            "type": "string",
+                            "required": true,
+                            "description": "Status",
+                            "defaultValue": "success"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "ErrDesc",
+                            "type": "string",
+                            "required": false,
+                            "description": "ErrDesc"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "Signature",
+                            "type": "string",
+                            "required": false,
+                            "description": "Signature",
+                            "defaultValue": "iSG0lTtvvpvspFbJda5BI0ADrSM="
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Image not found"
+                        },
+                        {
+                            "code": 404,
+                            "message": "User not found."
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/payment/ipay88/sdkBackendEstamping",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "sdkBackendEstamping",
+                    "nickname": "sdkBackend",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "RefNo",
+                            "type": "string",
+                            "required": true,
+                            "description": "RefNo",
+                            "defaultValue": "462-2131231-5"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "MerchantCode",
+                            "type": "string",
+                            "required": true,
+                            "description": "MerchantCode",
+                            "defaultValue": "M08747"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "PaymentId",
+                            "type": "string",
+                            "required": true,
+                            "description": "PaymentId",
+                            "defaultValue": "2"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "Amount",
+                            "type": "string",
+                            "required": true,
+                            "description": "Amount",
+                            "defaultValue": "1.00"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "Currency",
+                            "type": "string",
+                            "required": true,
+                            "description": "Currency",
+                            "defaultValue": "MYR"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "Remark",
+                            "type": "string",
+                            "required": true,
+                            "description": "tenant's name",
+                            "defaultValue": "V9lLjQgUrBRPsqGtUX7QinNyXszjRENpCsprEyyVQ+7DCQdqbYaKq6q7KiAeaSqCcr/IiUf1DDX89eNofU57qA"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "TransId",
+                            "type": "string",
+                            "required": true,
+                            "description": "TransId",
+                            "defaultValue": "T10850233540065424971"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "AuthCode",
+                            "type": "string",
+                            "required": true,
+                            "description": "AuthCode",
+                            "defaultValue": "T10850233540065424971"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "Status",
+                            "type": "string",
+                            "required": true,
+                            "description": "Status",
+                            "defaultValue": "success"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "ErrDesc",
+                            "type": "string",
+                            "required": false,
+                            "description": "ErrDesc"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "Signature",
+                            "type": "string",
+                            "required": false,
+                            "description": "Signature",
+                            "defaultValue": "iSG0lTtvvpvspFbJda5BI0ADrSM="
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Image not found"
+                        },
+                        {
+                            "code": 404,
+                            "message": "User not found."
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/payment/redeemPromoItem",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "redeemPromoItem",
+                    "nickname": "redeemPromoItem",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "promoId",
+                            "type": "string",
+                            "required": true,
+                            "description": "promoId (get from api - SubmitPromoCode)"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/payment/removeRedeemedItem",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "remove redeemed item history",
+                    "nickname": "removeRedeemedItem",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "promoId",
+                            "type": "string",
+                            "required": true,
+                            "description": "promoId (get from api - SubmitPromoCode)"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/payment/submitPromoCode",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "SubmitPromoCode",
+                    "nickname": "submitPromoCode",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "promoCode",
+                            "type": "string",
+                            "required": true,
+                            "description": "promoCode"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

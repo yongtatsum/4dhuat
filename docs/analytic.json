@@ -1,0 +1,135 @@
+{
+    "basePath": "https://lesystenancy.com/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/analytic",
+    "apis": [
+        {
+            "path": "/analytics",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "List user properties analytics",
+                    "nickname": "analytics",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "userID",
+                            "type": "integer",
+                            "required": false,
+                            "description": "user's id (optional, will get current user if empty)"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "type",
+                            "type": "string",
+                            "required": true,
+                            "description": "analytic type",
+                            "enum": [
+                                "propertyType",
+                                "area",
+                                "nego",
+                                "propertyTypeFull",
+                                "areaFull",
+                                "propertyCategory",
+                                "propertyDailyViewer"
+                            ]
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/analytics/admin",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "List admin properties analytics",
+                    "nickname": "adminAnalytics",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "dateRange",
+                            "type": "string",
+                            "required": true,
+                            "description": "analytic date range",
+                            "enum": [
+                                "7days",
+                                "lastMonth",
+                                "last3Months"
+                            ]
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/analytics/listPropertyDailyViewer",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "List admin property's daily viewer analytics",
+                    "nickname": "adminAnalytics",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "dateRange",
+                            "type": "string",
+                            "required": true,
+                            "description": "analytic date range",
+                            "enum": [
+                                "7days",
+                                "lastMonth",
+                                "last3Months"
+                            ]
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "propertyID",
+                            "type": "integer",
+                            "required": false,
+                            "description": "property's id"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/analytics/timeline",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "List advertiser analytics",
+                    "nickname": "featuredAnalytics",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "dateRange",
+                            "type": "string",
+                            "required": true,
+                            "description": "analytic date range",
+                            "enum": [
+                                "7days",
+                                "lastMonth",
+                                "last3Months"
+                            ]
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "userID",
+                            "type": "string",
+                            "required": true,
+                            "description": "User ID"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

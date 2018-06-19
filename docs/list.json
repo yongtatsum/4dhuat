@@ -1,0 +1,48 @@
+{
+    "basePath": "http://bidoboo.com/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/list",
+    "apis": [
+        {
+            "path": "/list/nannyForm",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "nanny form data, which contains array - nasionalities,religions,maritalStatuses,workDurations",
+                    "nickname": "nannyForm",
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/list/notification",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "notification",
+                    "nickname": "notification",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

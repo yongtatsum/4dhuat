@@ -1,0 +1,321 @@
+{
+    "basePath": "https://lesystenancy.com/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/chat",
+    "apis": [
+        {
+            "path": "/chat/addGroupMember",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "add group member",
+                    "nickname": "addGroupMember",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "userIDs[]",
+                            "type": "integer",
+                            "required": true,
+                            "description": "user's id"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "roomID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "room's id"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/chat/createGroupChat",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "create GroupChat",
+                    "nickname": "createGroupChat",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "userIDs[]",
+                            "type": "integer",
+                            "required": true,
+                            "description": "user's id (No need to pass creator's id)"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "name",
+                            "type": "integer",
+                            "required": false,
+                            "description": "room's name optional (will members' name if no insert)"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "image",
+                            "type": "file",
+                            "required": true,
+                            "description": "room's image optional "
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/chat/editGroupChat",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "edit GroupChat",
+                    "nickname": "editGroupChat",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "roomID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "room's id"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "name",
+                            "type": "integer",
+                            "required": false,
+                            "description": "room's name optional (will members' name if no insert)"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "image",
+                            "type": "file",
+                            "required": true,
+                            "description": "room's image optional "
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/chat/getMyChatRooms",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Get my chat room",
+                    "nickname": "getMyChatRooms",
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/chat/getUnreadHistory",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "create room (if room not found) and retrive unread chat history",
+                    "nickname": "getUnreadHistory",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "userID",
+                            "type": "integer",
+                            "required": false,
+                            "description": "user's id optional (will use roomID if no insert)"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "roomID",
+                            "type": "integer",
+                            "required": false,
+                            "description": "room's ID optional (will use userID if no insert)"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/chat/removeChatRoom",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "remove chat room",
+                    "nickname": "removeChatRoom",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "roomID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "room's id"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/chat/removeGroupMember",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "remove group member",
+                    "nickname": "removeGroupMember",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "userIDs[]",
+                            "type": "integer",
+                            "required": true,
+                            "description": "user's id"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "roomID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "room's id"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/chat/roomInfo",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "room info",
+                    "nickname": "roomInfo",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "roomID",
+                            "type": "integer",
+                            "required": false,
+                            "description": "room's ID optional (will use userID if no insert)"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/chat/sendMsgByApi",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Send chat msg by using api",
+                    "nickname": "sendMsgByApi",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "userID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "user's id "
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "recipientID",
+                            "type": "integer",
+                            "required": true,
+                            "description": "recipient's ID"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/chat/uploadAudio",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "uploadAudio",
+                    "nickname": "uploadAudio",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "audios[]",
+                            "type": "file",
+                            "required": true,
+                            "allowMultiple": true,
+                            "description": "user's audios"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "transID",
+                            "type": "string",
+                            "required": true,
+                            "description": "Chat's transID"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/chat/uploadImage",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "uploadImage",
+                    "nickname": "uploadImage",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "pictures[]",
+                            "type": "file",
+                            "required": true,
+                            "allowMultiple": true,
+                            "description": "user's pictures"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "transID",
+                            "type": "string",
+                            "required": true,
+                            "description": "Chat's transID"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/chat/uploadVideo",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "uploadVideo",
+                    "nickname": "uploadVideo",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "videos[]",
+                            "type": "file",
+                            "required": true,
+                            "allowMultiple": true,
+                            "description": "user's videos"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "transID",
+                            "type": "string",
+                            "required": true,
+                            "description": "Chat's transID"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

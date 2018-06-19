@@ -1,0 +1,157 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 27, 2017, 3:59:14 PM
+    Author     : yongtat
+*/
+
+.result_icon{
+    width: 70px;
+    height: auto;
+}
+.result_row{
+    padding: 15px
+}
+
+.result_table{
+    padding: 10px;
+    width: 100%;
+    background: white;
+}
+
+.result_table td {
+    padding: 0px 10px 0px 10px;
+}
+
+
+.result_header td {
+    color:white;
+}
+
+.prize_icon{
+  color: #ce2c2c;
+  font-size: xx-large  
+}
+.prize_title{
+  font-size: x-large 
+}
+.result_row .prize_top3{
+  font-size: x-large 
+}
+
+.border_bottom{
+     border-bottom: #cccccc 1px solid;
+}
+.border_right{
+     border-right: #cccccc 1px solid;
+}
+.border_top{
+     border_top: #cccccc 1px solid;
+}
+
+.special_row{
+    height:50px;
+    font-size: 20px;
+    background: #9fbddb;
+}
+
+.consolation_row{
+    height:50px;
+    font-size: 20px;
+    background: #c8b8ee;
+}
+.special_row_result{
+    height:40px;
+    font-size: 16px;
+}
+
+
+.border{
+    border: #cccccc 1px solid;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid  black;
+    margin: 1em 0;
+    padding: 0; 
+}
+
+.sudoku_block{
+    width:75px;
+    height: 75px;
+    font-size: 30pt
+}
+.blink_text {
+
+    animation:3s blinker linear infinite;
+    -webkit-animation:3s blinker linear infinite;
+    -moz-animation:3s blinker linear infinite;
+
+     background: #ffe0e0;
+    }
+
+    @-moz-keyframes blinker {  
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @-webkit-keyframes blinker {  
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @keyframes blinker {  
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+     
+.black_trans {
+    background: black;
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}

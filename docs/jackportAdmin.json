@@ -1,0 +1,89 @@
+{
+    "basePath": "https://www.fourdhuat.com:443/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/jackportAdmin",
+    "apis": [
+        {
+            "path": "/jackportAdmin/create",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "create jackport",
+                    "nickname": "jackport",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "title",
+                            "type": "string",
+                            "required": true,
+                            "description": "title",
+                            "defaultValue": ""
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "description",
+                            "type": "string",
+                            "required": true,
+                            "description": "description",
+                            "defaultValue": "\u53f7\u7801\uff3b0001-2000\uff3d,\u76f4\u5230\u6d3e\u5b8c\u4e3a\u6b62"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "reward",
+                            "type": "string",
+                            "required": true,
+                            "description": "reward (MYR)",
+                            "defaultValue": "1000"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "allow_free",
+                            "type": "integer",
+                            "required": true,
+                            "description": "allow free",
+                            "defaultValue": "500"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "require_join",
+                            "type": "string",
+                            "required": true,
+                            "description": "require user join",
+                            "defaultValue": "2000"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "total_round",
+                            "type": "string",
+                            "required": true,
+                            "description": "total round to set",
+                            "defaultValue": "3"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "result_method",
+                            "type": "string",
+                            "required": true,
+                            "description": "result_method",
+                            "enum": [
+                                "toto_1",
+                                "damacai_1",
+                                "magnum_1",
+                                "toto_2",
+                                "damacai_2",
+                                "magnum_2",
+                                "toto_3",
+                                "damacai_3",
+                                "magnum_3"
+                            ]
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

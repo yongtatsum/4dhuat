@@ -1,0 +1,899 @@
+body {
+
+    // font-weight
+    // regular 300
+    // medium 400
+    // bold 500
+
+    background-color: #F5F5F5;
+
+    &.home {
+
+        background-color: #fff;
+
+        .select2-drop-active {
+
+            border-color: #DCE0E0;
+
+        }           
+
+        .navbar {
+
+            background-color: transparent;    
+
+            ul {
+
+                > li {
+
+                    > a {
+
+                        color: #FFF;
+
+                    }           
+                }
+            }           
+            
+        }  
+
+    }
+
+    color: #575a5c;
+    font-size: 14px;
+    font-weight: 400;
+
+    padding: 0;
+
+    h1, h2, h3, h4, h5, h6 {
+
+        margin: 10px 0;
+        font-weight: 300;
+
+    }
+
+    a {
+
+        color: #7ac029;
+
+        &:focus,
+        &:active,
+        &:hover {
+
+            color: #7ac029;
+            text-decoration: none;          
+
+        }
+
+    }
+
+    table {
+
+        tr {
+
+            td {}
+
+        }
+
+    } // table         
+
+    footer {
+
+        padding-bottom: 60px;
+        padding-top: 40px;
+        background-color: #383838;
+        min-height: 450px;
+
+        color: #7D7D7D;
+
+        img {
+
+            margin-bottom: 25px;            
+
+        }
+
+        p {
+
+            margin-bottom: 8px;
+            font-size: 14px;
+
+            > a{
+                color: #b0b0b0;
+
+                &:hover {
+                    color:white;
+                }
+            }
+        }
+
+        .sitemap {
+
+            h5 {
+
+                color: #fff;
+                text-transform: uppercase;
+
+                margin: 5px 0 15px 0;
+
+            }
+
+            ul {
+
+                list-style-type: none;
+                padding: 0;
+
+                li {
+
+                    margin-bottom: 5px;
+
+                     a {
+                        color: #b0b0b0;
+
+                        &:hover {
+                            color:white;
+                        }
+                    }
+                }
+            }
+
+        }
+
+    } // footer
+
+            .icon {
+                opacity: 0.5;
+                display: inline-block;
+                text-indent: -9999px;
+                height: 42px;
+                width: 42px;
+
+                &.facebook {
+                    background: url("../img/fb_icon.png");
+                }
+                &.twitter {
+                    background: url("../img/twitter_icon.png");
+                }
+                &.linkedin {
+                    background: url("../img/linkedin_icon.png");
+                }
+            }
+
+            .btn-accept {
+                background: url("../img/acc_accept_icon_on.png");
+                width: 32px;
+                height: 34px;
+                background-repeat: no-repeat;
+                border-width: 0px;
+            }
+
+            .btn-decline {
+                background: url("../img/acc_decline_icon_on.png");
+                width: 32px;
+                height: 34px;
+                background-repeat: no-repeat;
+                border-width: 0px;
+            }
+
+            .btn-archive {
+                background: url("../img/acc_trash_icon_off.png");
+                width: 32px;
+                height: 34px;
+                background-repeat: no-repeat;
+                border-width: 0px;
+            }
+
+            .btn {
+
+                color: #fff;
+                border: 0;
+                border-radius: 4px;
+                box-shadow: 0 3px 0 #C96C2B;
+                background-color: #E87C32;
+
+                min-width: 170px;
+
+                padding: 10px 12px;
+
+                font-size: 16px;
+                font-weight: 500;
+
+                &.btn-sm {
+
+                    min-width: auto;
+                    font-size: 14px;
+                    font-weight: 300;
+
+                    padding: 8px 12px;
+
+                }       
+
+                &.btn-xs {
+
+                    min-width: auto;
+                    font-size: 12px;
+                    font-weight: 300;
+
+                    padding: 5px 10px;
+
+                }
+
+                &:active,
+                &:focus, 
+                &:hover {
+                    color: #fff;
+                    background-color: #E87C32;
+                }
+
+                &.btn-primary {
+                    box-shadow: 0 3px 0 #68AB37;
+                    background-color: #79C53F;
+                }
+
+                input[type="file"] {
+                    cursor: inherit;
+                    display: block;
+
+                    height: 40px;
+                    width: 170px;
+
+                    opacity: 0;
+                    filter: alpha(opacity=0);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+
+                &.btn-disabled {
+                    background-color: #BCBBBB;
+                }
+
+
+
+
+                } // .btn
+
+                .btn-group {
+
+                    .btn {
+
+                        border: 1px solid #C96C2B;
+                        border-width: 0 1px 0 1px;
+
+                        &:active,
+                        &:focus, 
+                        &:hover {
+
+                            box-shadow: 0 3px 0 #C96C2B;
+                            background-color: #E87C32;              
+
+                        }
+
+                        &:first-child {
+
+                            border-left: 0;
+
+                        }
+
+                        &:last-child {
+
+                            border-right: 0;
+
+                        }           
+
+                    }
+
+                    } // .btn-group
+
+                    .alert {
+
+                        border-radius: 0;
+
+                    }
+
+                    .navbar {
+
+                        background-color: #fff;
+                        border: 0;
+
+                        // height: 142px;
+
+                        .navbar-brand {
+
+                            padding: 26px 0;
+                            height: 88px;
+
+                        }
+
+                        .navbar-search {
+                            padding: 26px 0;
+                            border: 1px solid;
+                        }
+
+                        .arrow-down {
+                            width: 10px;
+                            height: 6px;
+
+                        }
+
+                        ul {
+
+                            > li {
+
+                                position: static;
+
+                                > a {
+
+                                    padding: 27px 10px;
+
+                                    line-height: 34px;
+
+                                    color: #575A5C;
+                                    font-size: 18px;
+                                    font-weight: 200;
+
+                                    &:hover {
+
+                                        background-color: transparent;
+
+                                    }  
+                                    &.btn {
+
+                                        color: #fff;
+                                        box-shadow: 0 3px 0 #C96C2B;
+                                        background-color: #E87C32;
+                                        font-weight: 500;
+
+                                        margin: 27px 15px;
+                                        padding: 0 24px;
+
+
+                                        &:hover {
+
+                                            color: #fff;
+                                            background-color: #E87C32;
+
+                                        }
+
+                                    }  
+
+                                    .mail-icon {
+                                        width: 25px;
+                                        height: 17px;
+                                        border-radius: 0px;
+                                    }                      
+
+                                    .avatar-icon {
+
+                                        width: 34px;
+                                        height: 34px;
+
+                                        border-radius: 34px;
+
+                                        margin-right: 10px;
+
+                                    }
+
+                                }
+
+                                .navbar-submenu {
+
+                                    background-color: rgba(0, 0, 0, 0.5);
+
+                                    position: absolute;
+                                    top: 100%;   
+                                    left: 0;    
+
+                                    width: 100%;        
+
+                                    ul {
+
+                                        display: block;
+                                        list-style: outside none none;
+
+                                        // position: absolute;
+                                        // top: 100%;
+                                        // top: 92px;
+                                        // left: 50%; 
+
+                                        margin: 0 auto;
+                                        padding: 0;
+
+                                        max-width: 100%;
+
+                                        @media (min-width: 768px) {
+                                            width: 768px;
+                                            // margin-left: -384px;                     
+                                        }
+                                        @media (min-width: 992px) {
+                                            width: 992px;
+                                            // margin-left: -496px;
+                                        }
+                                        @media (min-width: 1200px) {
+                                            width: 1200px;
+                                            // margin-left: -600px;                     
+                                        }                   
+
+                                        > li {
+
+                                            float: left;
+
+                                            > a {
+
+                                                display: block;
+
+                                                padding: 12px 15px;
+
+                                                line-height: 20px;
+
+                                                color: #fff;
+
+                                                font-size: 16px;
+
+                                            }  
+
+                                            .active {
+                                                opacity: 0.5;   
+                                            }                 
+
+                                        }
+                                    }                   
+
+                                }
+                            }
+                        }
+                        } // .navbar
+
+                        .help-block {
+
+                            margin: 7px 0 0 0;
+
+                        }
+
+                        .help-block:last-child {
+                            margin-bottom: 5px;
+                        }
+
+                        .panel {
+
+                            border-radius:  0;
+                            box-shadow: 0;
+
+                            &.panel-default {
+
+                                border-color: #DEDEDE;
+
+                            }   
+
+                            &.panel-user {
+
+                                .img-avatar {
+
+                                    width: 300px;
+                                    height: 300px;
+
+                                    border-radius: 150px;
+                                    margin: 0 auto;
+
+
+                                    // object-fit: cover;
+                                    background-size: 300px 300px;
+                                    background-position: center center;
+                                    background-size: cover;
+
+                                }
+
+                                .user-name {
+                                    margin: 30px 0 10px;
+                                }
+
+                                } // .panel-user
+
+                                &.panel-sidebar {
+
+                                    // .form-group {
+                                        //  margin: 0 0 8px 0;
+                                        //  padding: 0 0 8px 0;
+                                        // }            
+
+                                        ul {
+
+                                            margin: 0;
+                                            padding: 0;
+
+                                            list-style: outside none none;
+
+                                            li {
+
+                                                text-align: center;
+
+                                                line-height: 30px;
+
+                                                a {
+
+                                                    font-weight: 500;
+
+                                                }
+
+                                            }
+
+                                        }
+
+                                    }       
+
+                                    .panel-heading {
+
+                                        padding: 17px 20px;
+
+                                        border-radius: 0;
+                                        border-color: #EDEEED;
+
+                                        font-size: 16px;
+                                        color: #575a5c;
+
+                                        .panel-title {
+
+                                            font-weight: 500;
+                                            line-height: 16px;
+
+                                        }
+
+                                        &.panel-avatar {
+
+                                            padding: 0;     
+
+                                            #img-avatar {
+
+                                                width: 300px;
+                                                height: 300px;
+
+
+                                                // object-fit: cover;
+                                                background-size: 300px 300px;
+                                                background-position: center center;
+                                                background-size: cover;
+
+                                            }
+
+                                        }
+
+                                    }
+
+                                    .panel-body {  
+
+                                        .panel-scrollable {
+
+                                            height: 200px;
+                                            overflow-x: hidden;
+                                            overflow-y: auto;
+                                            position: relative;
+
+                                            .checkbox-inline {
+
+                                                margin-left: 10px;
+
+                                            }
+
+                                        }                    
+
+                                        padding: 30px 15px;         
+
+                                        article {
+
+                                            padding: 20px 15px;
+
+                                            border-top: 1px solid #DCDAD9;
+
+                                            .additional-info {
+
+                                                font-size: 14px;
+
+                                                .nego-percent {
+                                                    color: #FF6600;
+                                                }
+                                            }
+
+                                            img {
+
+                                                float: left;
+
+                                                margin-right: 15px;
+
+                                            }
+
+                                            &:first-child {
+
+                                                border-top: 0;
+
+                                            }
+
+                                            .fa {
+
+                                                color: #79C53F;
+
+                                            }
+
+                                            .fa-large {
+
+                                                font-size: 48px;
+
+                                            }
+
+                                        }
+
+                                        form {
+
+                                            padding: 5px 15px;
+
+                                        }
+
+                                        .pagination {
+
+                                            margin: 10px 0 0 0;
+
+                                            border: 0;
+                                            border-radius: 0;
+
+                                            li {
+
+                                                &:last-child a {
+
+                                                    border: 0;
+                                                    border-radius: 0;                       
+
+                                                }
+
+                                                &:first-child a {
+                                                    border: 0;
+                                                    border-radius: 0;
+                                                }
+
+                                                &:nth-child(2) a{
+                                                    border: 0;
+                                                    border-left: 1px solid #DCDAD9;
+                                                    border-right: 1px solid #DCDAD9;
+                                                }
+
+                                                .pagination-right {
+                                                    background: url("../img/arrowright_green.png");
+                                                    background-repeat: no-repeat;
+                                                    vertical-align: middle;
+                                                    width: 6px;
+                                                    height: 9px;
+                                                    margin-top: 5px;
+                                                    margin-left: 12px;
+
+                                                }
+
+                                                .pagination-left {
+                                                    background: url("../img/arrowleft_green.png");
+                                                    background-repeat: no-repeat;
+                                                    width: 6px;
+                                                    display: inline;
+                                                    height: 20px;
+                                                    margin-top: 5px;
+
+                                                }
+
+                                                .active {
+                                                    color: black;
+                                                    text-decoration: underline;
+                                                }
+
+                                                a {
+                                                    margin: 0;
+                                                    padding: 0 12px;
+
+                                                    color: #79C53F;
+
+                                                    border: 0;
+                                                    border-right: 1px solid #DCDAD9;
+
+                                                    &:hover {
+
+                                                        background-color: transparent;
+
+                                                    }
+
+                                                }
+
+                                            }
+
+                                            } // .pagination            
+
+                                            } // .panel-body
+
+                                            } // .panel
+
+                                            form {
+
+                                                legend {
+
+                                                    font-size: 14px;
+                                                    font-weight: 500;
+
+                                                    border: 0;
+
+                                                }
+
+                                                .form-group {
+
+                                                    margin: 0 0 15px 0;
+                                                    padding: 0 0 15px 0;
+
+                                                    border-bottom: 1px solid #DDDAD9;
+
+                                                    &:last-child {
+
+                                                        margin-bottom: 0;
+                                                        padding-bottom: 0;
+
+                                                        border-bottom: 0;
+
+                                                    }
+
+                                                    .form-control {
+
+                                                        border: 0;
+                                                        border-radius: 0;
+                                                        box-shadow: none;
+
+                                                        font-weight: 500;   
+                                                        color: #575a5c;
+
+                                                    }       
+
+                                                    .input-group {
+
+                                                        .input-group-addon {
+
+                                                            background-color: transparent;
+
+                                                            border: 0;
+                                                            border-radius: 0;
+
+                                                            color: rgba(87, 90, 92, 0.5);
+
+                                                        }
+
+
+                                                    }
+
+                                                }               
+
+                                                input[type="text"], 
+                                                input[type="password"] {
+
+                                                    padding: 6px 0;
+                                                    border: 0;
+                                                    border-radius: 0;
+                                                    box-shadow: none;
+                                                    color: #575a5c;
+                                                    font-weight: 500;  
+                                                    font-size: 14px;
+
+                                                }       
+
+                                                .form-upload {
+
+                                                    > .btn {
+
+                                                        position: relative;
+
+                                                    }
+
+                                                }   
+
+                                                .control-label {
+
+                                                    color: rgba(87, 90, 92, 0.5);
+                                                    font-weight: 400;
+                                                    font-size: 14px;
+                                                    text-align: left;
+                                                    color: #575a5c;
+                                                    opacity: 0.5;
+
+                                                    &.control-required {
+
+                                                        &:after {
+                                                            color: #e32;
+                                                            content: ' *';
+                                                            display: inline;
+                                                        }
+
+                                                    }   
+
+                                                }   
+
+                                                .combodate {
+
+                                                    display: block;
+
+                                                    margin: 8px 0;
+
+                                                }   
+
+                                                .checkbox {
+
+                                                    padding-top: 3px;
+
+                                                }   
+
+                                                .checkboxes {
+
+                                                    margin: 0;
+                                                    padding: 0 0 0 15px;
+
+                                                    li {
+
+                                                        float: left;
+                                                        width: 150px;
+                                                        margin-bottom: 5px;
+
+                                                    }
+
+                                                }
+
+                                                .checkbox-inline {
+
+                                                    &:first-child {
+                                                        margin-left: 10px;
+                                                    }
+
+                                                    margin-left: 0;
+                                                    width: 150px;
+                                                }
+
+                                                ul {
+
+                                                    margin: 0;
+                                                    padding: 0 0 0 15px;
+
+                                                    li {
+
+                                                        color: #737373;
+
+                                                    }
+
+                                                }
+
+                                                } // form
+
+                                            }
+
+                                            .user-name {
+
+                                                margin-top: 0;
+
+                                                text-align: center;
+
+                                                font-size: 28px;
+
+                                            }
+
+                                            .user-ratings {
+
+                                                margin-bottom: 20px;
+
+                                                text-align: center;
+
+                                            }   
+
+                                            .page {
+
+                                                padding: 157px 0 0 0;
+
+                                                &.admin-setting-page {
+
+                                                    form {
+                                                        padding-bottom: 20px;
+                                                    }
+
+                                                    input[type="password"] {
+                                                        padding: 6px 12px;
+                                                    }
+
+                                                }
+
+                                                @import "guest/home";
+                                                @import "guest/user";
+                                                @import "guest/prop";
+                                            }
+

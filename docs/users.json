@@ -1,0 +1,252 @@
+{
+    "basePath": "http://bidoboo.com/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/users",
+    "apis": [
+        {
+            "path": "/users/adminLogin",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "User login",
+                    "nickname": "login",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "email",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's email"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "password",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's password"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 401,
+                            "message": "Email and password does not match"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Email address not found"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/users/fbConnect",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Connect by facebook",
+                    "nickname": "fbConnect",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "fb_id",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's facebook ID"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "email",
+                            "type": "string",
+                            "required": true,
+                            "description": "facebook's email"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "avatar",
+                            "type": "string",
+                            "required": false,
+                            "description": "Facebook avatar"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "cover",
+                            "type": "string",
+                            "required": false,
+                            "description": "Facebook cover"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "name",
+                            "type": "string",
+                            "required": true,
+                            "description": "name"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "mobile",
+                            "type": "string",
+                            "required": false,
+                            "description": "user's mobile (optional)"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/users/login",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "User login",
+                    "nickname": "login",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "email",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's email"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "password",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's password"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 401,
+                            "message": "Email and password does not match"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Email address not found"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/users/logout",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "User logout",
+                    "nickname": "logout",
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/users/me",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Current user info",
+                    "nickname": "me",
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Image not found"
+                        },
+                        {
+                            "code": 404,
+                            "message": "User not found."
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/users/register",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "User register",
+                    "nickname": "Register",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "email",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's email"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "confirm_email",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's confirm email"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "password",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's password"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "confirm_password",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's confirm_password"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "name",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's name"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "mobile",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's mobile"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/users/reset",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "User reset password",
+                    "nickname": "ResetPassword",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "email",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's email"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 404,
+                            "message": "Email address not found"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

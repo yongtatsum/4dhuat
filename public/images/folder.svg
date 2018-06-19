@@ -1,0 +1,35 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 67.085 43.981">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="36.74" y1="-27.636" x2="36.74" y2="57.664" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff100"/>
+      <stop offset="1" stop-color="#68bc45"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="35.002" y1="-27.636" x2="35.002" y2="57.664" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="32.406" y1="-27.636" x2="32.406" y2="57.664" xlink:href="#linear-gradient"/>
+  </defs>
+  <title>31cca65f-b8ab-44bc-9ae3-234362413c1e</title>
+  <g>
+    <g id="_Group_" data-name="&lt;Group&gt;">
+      <path class="cls-1" d="M64.5,43.981H6.395l0.126-.476c2.546-9.589,7.751-13.746,7.971-13.919l0.112-.06L67.085,11.74l-0.627.93c-8.534,12.664-2.2,30.624-2.139,30.8Zm-57.12-.757H63.439c-0.947-2.973-5.307-18.387,1.8-30.06L14.912,30.221C14.395,30.652,9.774,34.7,7.383,43.224Z" transform="translate(0)"/>
+    </g>
+    <g id="_Group_2" data-name="&lt;Group&gt;">
+      <path class="cls-2" d="M64.578,43.981H6.6L6.522,43.7a25.475,25.475,0,0,1-.115-14.46,16.288,16.288,0,0,1,2.524-5.189l0.116-.1L54.5,0l-0.214.828c-3.839,14.878,9.876,42.328,10.015,42.6Zm-57.4-.757H63.353c-1.956-4-13.02-27.515-9.992-41.768L9.474,24.592C8.955,25.28,4.158,32.061,7.175,43.224Z" transform="translate(0)"/>
+    </g>
+    <g id="_Group_3" data-name="&lt;Group&gt;">
+      <path class="cls-3" d="M64.812,43.981H6.428L6.318,43.8c-0.074-.119-7.4-12-6.18-23.024l0.019-.169,6.1-4.3V7.949h8.351v2.467l9.107-6.422,22,6.5,0,0.279c0,0.184.463,18.609,18.228,32.533Zm-57.96-.757H62.636A49.01,49.01,0,0,1,47.375,21.991a38.913,38.913,0,0,1-2.4-10.928l-21.12-6.24-10,7.053V8.706H7.017V16.7L0.873,21.032C-0.155,31.024,5.958,41.723,6.852,43.224Z" transform="translate(0)"/>
+    </g>
+  </g>
+</svg>

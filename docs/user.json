@@ -1,0 +1,185 @@
+{
+    "basePath": "https://www.fourdhuat.com:443/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/user",
+    "apis": [
+        {
+            "path": "/user/fbConnect",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "Connect by facebook",
+                    "nickname": "fbConnect",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "access_token",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's facebook access_token",
+                            "defaultValue": "EAACsqh7SQEkBAHhMCOpeBrAEOahxmD57eN9QFEOZBaOZCmKlXksAyEoKb7QH5EHMq9ADLRrBRCHjiyI0ZCFdvstHhRQX4xRVFhn4vJXrF8HPiQ3Am1rgYZAylOYynZB1gdof82VNdix0cZBgZAn7se2MaNcmyIa0cMhSK3qh8ZA2o98GuaZAjXRY05bPxq2cDiFIZD"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "app_token",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's app token"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/user/getContacts",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "getContacts",
+                    "nickname": "getContacts",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "mobiles[0]",
+                            "type": "string",
+                            "required": true,
+                            "description": "mobile"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/user/login",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "User login",
+                    "nickname": "login",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "email",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's email"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "password",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's password"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 401,
+                            "message": "Email and password does not match"
+                        },
+                        {
+                            "code": 404,
+                            "message": "Email address not found"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/user/logout",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "User logout",
+                    "nickname": "logout",
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/user/recordConversion",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "recordConversion",
+                    "nickname": "recordConversion",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "media_source",
+                            "type": "string",
+                            "required": true,
+                            "description": "media_source"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "af_status",
+                            "type": "string",
+                            "required": true,
+                            "description": "af_status"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "af_message",
+                            "type": "string",
+                            "required": true,
+                            "description": "af_message"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "clickid",
+                            "type": "string",
+                            "required": true,
+                            "description": "clickid"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "agency",
+                            "type": "string",
+                            "required": true,
+                            "description": "agency"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/user/updateToken",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "User update token",
+                    "nickname": "updateToken",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "token",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's app token"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "platform",
+                            "type": "string",
+                            "required": true,
+                            "description": "device's platform",
+                            "enum": [
+                                "android",
+                                "ios"
+                            ]
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

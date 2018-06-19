@@ -1,0 +1,209 @@
+{
+    "basePath": "https://lesystenancy.com/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/follower",
+    "apis": [
+        {
+            "path": "/followers/listByPage",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "My Followers",
+                    "nickname": "myFollowers",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "keyword",
+                            "type": "string",
+                            "required": false,
+                            "description": "user's name"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "role_id",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's type 0-All, 1-Administrator, 2-Agent, 3-Member",
+                            "enum": [
+                                "0",
+                                "1",
+                                "2",
+                                "3"
+                            ]
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "userID",
+                            "type": "integer",
+                            "required": false,
+                            "description": "target user's id (currect user will selected if no pass)"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "status",
+                            "type": "integer",
+                            "required": false,
+                            "description": "Follow status, -1 : Pending , 0 : Unfollow,  1 : following ",
+                            "enum": [
+                                "-1",
+                                "0",
+                                "1"
+                            ]
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/followers/me",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Payment packages",
+                    "nickname": "GetFollowers",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "keyword",
+                            "type": "string",
+                            "required": false,
+                            "description": "user's name"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/followers/{id}/decline",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "follower decline",
+                    "nickname": "decline",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "id",
+                            "type": "string",
+                            "required": true,
+                            "description": "follower id"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/followers/{type}/me",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Payment packages",
+                    "nickname": "GetFollowers",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "type",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's type",
+                            "enum": [
+                                "all",
+                                "member",
+                                "agent",
+                                "advertiser"
+                            ]
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "keyword",
+                            "type": "string",
+                            "required": false,
+                            "description": "user's name"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/followers/{type}/user",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Payment packages",
+                    "nickname": "GetFollowers",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "type",
+                            "type": "string",
+                            "required": true,
+                            "description": "user's type",
+                            "enum": [
+                                "all",
+                                "member",
+                                "agent",
+                                "advertiser"
+                            ]
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "keyword",
+                            "type": "string",
+                            "required": false,
+                            "description": "user's name"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "userID",
+                            "type": "integer",
+                            "required": false,
+                            "description": "user's id"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/users/{id}/follow",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "post follow ",
+                    "nickname": "follow",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "id",
+                            "type": "string",
+                            "required": true,
+                            "description": "user id"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

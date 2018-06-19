@@ -1,0 +1,68 @@
+{
+    "basePath": "https://lesystenancy.com/api",
+    "apiVersion": "1.0",
+    "resourcePath": "/notifications",
+    "apis": [
+        {
+            "path": "/notifications/myList",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "notification list",
+                    "nickname": "myList",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "pageLength",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page's length"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "page",
+                            "type": "integer",
+                            "required": false,
+                            "description": "page number"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        },
+        {
+            "path": "/notifications/on",
+            "operations": [
+                {
+                    "method": "POST",
+                    "summary": "on Notification",
+                    "nickname": "updateAndroidVersion",
+                    "parameters": [
+                        {
+                            "paramType": "form",
+                            "name": "platform",
+                            "type": "string",
+                            "required": true,
+                            "description": "device's platform",
+                            "enum": [
+                                "android",
+                                "ios"
+                            ]
+                        },
+                        {
+                            "paramType": "form",
+                            "name": "token",
+                            "type": "string",
+                            "required": false,
+                            "description": "token"
+                        }
+                    ],
+                    "notes": "Returns a json"
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}
