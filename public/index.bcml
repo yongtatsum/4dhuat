@@ -11,12 +11,12 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+        <div>Loading ... </div>
     </body>
 </html>
 <script>
 window.onload = function() {
     // similar behavior as clicking on a link
-    window.location.href = "https://fruits.fourdhuat.com";
+    window.location.href = "https://fourdhuat.com";
 }
 </script>
