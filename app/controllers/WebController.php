@@ -5,7 +5,7 @@
 class WebController extends BaseController{
 
           
-  protected $layout = 'layout.bizStore';
+  protected $layout = 'layout.guest';
 
   
   public function __construct() {
