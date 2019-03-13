@@ -184,10 +184,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
 
   <!-- Modal Content (The Image) -->
-  <center><a href="https://play.google.com/store/apps/details?id=com.solution.flyhigh.fourdhuat"><img class="modal-content" style="width:80%;max-width:500px;height:auto" src="{{ URL::asset('assets/images/4dhuat/banner.jpg') }}" ></center></a>
+  <center><a href="https://play.google.com/store/apps/details?id=com.solution.flyhigh.pics.thousand.thousandpictures.newest"><img class="modal-content" style="width:80%;max-width:500px;height:auto" src="{{ URL::asset('assets/images/tbg/banner.jpg') }}" ></center></a>
 
   <!-- Modal Caption (Image Text) -->
-  <div id="caption">获得更火神字, 下载 <a href="https://play.google.com/store/apps/details?id=com.solution.flyhigh.fourdhuat">Android app </a> 吧!</div>
+  <div id="caption">获得更火神字, 下载 <a href="https://play.google.com/store/apps/details?id=com.solution.flyhigh.pics.thousand.thousandpictures.newest">Android app </a> 吧!</div>
 </div>
 	
 <script>

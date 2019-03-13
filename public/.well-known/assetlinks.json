@@ -1,0 +1,5 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "com.solution.flyhigh.pics.thousand.thousandpictures.newest",
+               "sha256_cert_fingerprints": ["83:EF:F2:3F:EB:09:DB:C6:C5:EA:27:40:E5:16:AC:A8:07:FB:E3:E9:34:3D:00:3A:4D:D8:0B:D0:AA:64:A8:FC"] }
+}]

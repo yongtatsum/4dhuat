@@ -44,6 +44,21 @@
            </div>
             @endIf
             
+            @if($index%16==0)
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-format="fluid"
+                    data-ad-layout-key="-dd-u+64-5l-7g"
+                    data-ad-client="ca-pub-3166030118349880"
+                    data-ad-slot="8644933473"></ins>
+               <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+               </script>
+            @endIf
+            
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+            
             @endforeach
 
          {{ $tbgs->links() }}
